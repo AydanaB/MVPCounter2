@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity implements PresenterContract
     }
 
     @Override
-    public void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    public void showToast() {
+        Toast.makeText(this, "Поздравляю!", Toast.LENGTH_SHORT).show();
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
-    public void changeTvColor(int color) {
-        binding.tvCounter.setTextColor(color);
+    public void changeTvColor() {
+        binding.tvCounter.setTextColor(R.color.green);
     }
 }

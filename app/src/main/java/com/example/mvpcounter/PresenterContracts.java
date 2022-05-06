@@ -6,8 +6,8 @@ public class PresenterContracts {
 
     interface CounterView{
         void updateCounter(int counter);
-        void showToast(String message);
-        void changeTvColor(int color);
+        void showToast();
+        void changeTvColor();
     }
 
     interface CounterPresenter{

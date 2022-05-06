@@ -15,13 +15,10 @@ public class CounterPresenter implements PresenterContracts.CounterPresenter{
     public void increment() {
         counterModel.increment();
         counterView.updateCounter(counterModel.getCount());
-        if (counterModel.getCount() == 5){
-            counterView.showToast("Ура");
-        }
-        if (counterModel.getCount() == 10){
-            counterView.changeTvColor(R.color.green);
-        }else {
-            counterView.changeTvColor(R.color.black);
+        if (counterModel.count == 10){
+            counterView.showToast();
+        }else if (counterModel.count == 15){
+            counterView.changeTvColor();
         }
     }
 
@@ -29,13 +26,10 @@ public class CounterPresenter implements PresenterContracts.CounterPresenter{
     public void decrement() {
         counterModel.decrement();
         counterView.updateCounter(counterModel.getCount());
-        if (counterModel.getCount() == 5){
-            counterView.showToast("Ура");
-        }
-        if (counterModel.getCount() == 10){
-            counterView.changeTvColor(R.color.green);
-        }else {
-            counterView.changeTvColor(R.color.black);
+        if (counterModel.count == 10){
+            counterView.showToast();
+        }else if (counterModel.count == 15){
+            counterView.changeTvColor();
         }
     }
 
